@@ -1,0 +1,18 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+numpy
+opencv-python
+onnx
+insightface
+psutil
+tk
+customtkinter
+pillow
+torch
+torchvision
+onnxruntime
+tensorflow
+opennsfw2
+protobuf
+tqdm
+gfpgan
