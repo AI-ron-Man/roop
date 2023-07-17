@@ -61,7 +61,9 @@ def process_frame(source_face: Face, temp_frame: Frame) -> Frame:
     return temp_frame
 
 
-def process_frames(source_path: str, temp_frame_paths: List[str], progress: Any = None) -> None:
+def process_frame(source_face: Face, temp_frame: Frame) -> Frame:
+    #print(type(temp_frame))  # Überprüfen Sie den Typ von temp_frame
+    #print(temp_frame)  # Überprüfen Sie den Inhalt von temp_frame
     source_face = get_one_face(cv2.imread(source_path))
     for temp_frame_path in temp_frame_paths:
         temp_frame = cv2.imread(temp_frame_path)

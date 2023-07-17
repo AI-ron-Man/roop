@@ -4,15 +4,16 @@ from PIL import Image
 
 from roop.typing import Frame
 
-MAX_PROBABILITY = 0.85
+MAX_PROBABILITY = 1.00
 
 
 def predict_frame(target_frame: Frame) -> bool:
-    image = Image.fromarray(target_frame)
-    image = opennsfw2.preprocess_image(image, opennsfw2.Preprocessing.YAHOO)
-    model = opennsfw2.make_open_nsfw_model()
-    views = numpy.expand_dims(image, axis=0)
-    _, probability = model.predict(views)[0]
+    #image = Image.fromarray(target_frame)
+    #image = opennsfw2.preprocess_image(image, opennsfw2.Preprocessing.YAHOO)
+    #model = opennsfw2.make_open_nsfw_model()
+    #views = numpy.expand_dims(image, axis=0)
+    #_, probability = model.predict(views)[0]
+    probability = 0.00
     return probability > MAX_PROBABILITY
 
 
