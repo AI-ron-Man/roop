@@ -342,7 +342,7 @@ def webcam_preview():
 
         current_time = time.time()
         elapsed_time = current_time - fps_start_time
-        if elapsed_time >= 1.0:
+        if elapsed_time >= 5.0:
             fps = fps_counter / elapsed_time
             print(f"FPS: {fps:.2f}")
             fps_start_time = current_time

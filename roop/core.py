@@ -41,6 +41,7 @@ def parse_args() -> None:
     program.add_argument('--keep-fps', help='keep original fps', dest='keep_fps', action='store_true', default=False)
     program.add_argument('--keep-audio', help='keep original audio', dest='keep_audio', action='store_true', default=True)
     program.add_argument('--keep-frames', help='keep temporary frames', dest='keep_frames', action='store_true', default=False)
+    program.add_argument('--enhance-face', help='enahnce face with gfpgan', dest='enhance_face', action='store_true', default=False)
     program.add_argument('--many-faces', help='process every face', dest='many_faces', action='store_true', default=False)
     program.add_argument('--video-encoder', help='adjust output video encoder', dest='video_encoder', default='libx264', choices=['libx264', 'libx265', 'libvpx-vp9'])
     program.add_argument('--video-quality', help='adjust output video quality', dest='video_quality', type=int, default=18, choices=range(52), metavar='[0-51]')
